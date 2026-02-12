@@ -25,7 +25,7 @@ source .venv/bin/activate
 `uv pip`를 사용하여 필요한 파이썬 라이브러리를 설치합니다.
 
 ```bash
-uv add requests beautifulsoup4 pandas numpy matplotlib seaborn scikit-learn koreanize-matplotlib loguru, wordcloud
+uv add requests beautifulsoup4 pandas numpy matplotlib seaborn scikit-learn koreanize-matplotlib loguru wordcloud
 ```
 라이브러리를 설치하고 pyproject.toml 파일에 dependencies를 갱신해 줘
 
@@ -86,7 +86,7 @@ logger.add("file_{time}.log", rotation="500 MB") # 500MB 마다 로그 파일 �
     *   **`project_A/`, `project_B/`**: 개별 프로젝트 폴더입니다. 각 프로젝트는 자체 데이터(`data`) 디렉토리를 가집니다.
     *   **pyproject.toml**,**uv.lock**: uv 의존성 관련 파일입니다. 
 
-## 데이터를  웹스크래핑할 때 다음의 정보를 꼭 문서에 포함 할 것 
+## 데이터를  웹스크래핑 할 때 다음의 정보를 꼭 문서에 포함 할 것 
 
 ### 네트워크 메뉴를 통해 실제 데이터를 가져오는 URL
 ### 해당 Request에 대한 Header 정보
