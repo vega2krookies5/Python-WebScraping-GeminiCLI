@@ -2,7 +2,7 @@
 
 다음 요구사항을 충족하는 **Streamlit 기반 스타벅스 전국 매장 분석 웹앱**을 구현하라. 코드는 작성하지 말고 기능 위주의 구조와 설명을 제시하라.
 
-데이터와 분석 내용은 다음 파일을 참고할 것 => starbucks_stores/starbucks_stores.csv
+데이터와 분석 내용은 다음 파일을 참고할 것 => starbucks_stores/starbucks_ai.csv
 starbucks_stores 해당 경로의 분석 결과도 참고할 것 => starbucks_stores/eda_report.md
 
 ---
