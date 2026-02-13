@@ -39,7 +39,17 @@ uv pip install altair==4.2.2
 ```
 uv pip install standard-imghdr
 ```
+
+```
+uv pip install --upgrade streamlit
+```
+
 ```
 streamlit --version
 Streamlit, version 1.19.0
 ```
+
+uv remove streamlit
+uv remove streamlit-folium
+
+uv add streamlit --refresh
