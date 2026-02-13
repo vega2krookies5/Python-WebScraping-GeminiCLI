@@ -58,3 +58,5 @@ uv add streamlit_folium
 
 
 python ssg_com\ssg_scraper.py
+
+python ssg_com\ssg_scraper_sqlite.py
