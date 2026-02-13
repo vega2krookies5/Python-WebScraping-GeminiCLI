@@ -1,3 +1,4 @@
+# python starbucks_stores\starbucks_scraper.py
 import requests
 import pandas as pd
 from loguru import logger
