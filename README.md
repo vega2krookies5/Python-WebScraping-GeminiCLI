@@ -39,3 +39,7 @@ uv pip install altair==4.2.2
 ```
 uv pip install standard-imghdr
 ```
+```
+streamlit --version
+Streamlit, version 1.19.0
+```
