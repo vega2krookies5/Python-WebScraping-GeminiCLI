@@ -45,6 +45,6 @@ in_biz_cds=0&in_scodes=0&ins_lat=37.56682&ins_lng=126.97865&search_text=&p_sido_
 "list"하위의 모든 정보 수집하기
 
 ## 수집 내역
-p_sido_cd=01 부터 17까지 전국 스타벅스 매장 정보를 수집하는 파이썬 코드를 작성할 것 
+p_sido_cd=01 부터 17까지 전국 스타벅스 매장 정보를 수집하는 파이썬 코드 starbucks_stores/starbucks_scraper.py로 작성할 것 
 중간에 수집되는 내역을 확인할 수 있게 로그를 남길 것
-수집한 내용을 현재 폴더 하위에 있는 data에 저장하고 파일명은 starbucks_ai.csv로 저장할 것 
+수집한 내용을 현재 폴더 하위에 있는 data에 저장하고 파일명은 starbucks_stores/data/starbucks_ai.csv로 저장할 것 
