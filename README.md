@@ -41,7 +41,6 @@ uv pip install standard-imghdr
 ```
 
 ```
-uv pip install --upgrade streamlit
 ```
 
 ```
@@ -52,4 +51,7 @@ Streamlit, version 1.19.0
 uv remove streamlit
 uv remove streamlit-folium
 
-uv add streamlit --refresh
+uv add streamlit
+uv pip install --upgrade streamlit
+
+uv add streamlit_folium
