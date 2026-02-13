@@ -19,6 +19,9 @@ CSV 파일에서 도서 정보를 읽어와 데이터를 전처리하고, 통계
 출력물:
     - 'yes24/analysis_report.md': 통계 요약, 인사이트, 시각화 이미지 경로가 포함된 전체 분석 보고서 마크다운 파일.
     - 'yes24/images/': 생성된 시각화 이미지 파일(PNG 형식)이 저장되는 디렉토리.
+
+tabulate 의존성 설치 필요함    
+    uv add tabulate
 """
 
 import pandas as pd
