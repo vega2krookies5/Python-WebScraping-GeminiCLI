@@ -11,3 +11,6 @@ wheels/
 
 # Environment Variable
 .env
+
+# log file
+*.log
