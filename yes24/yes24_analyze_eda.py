@@ -1,12 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import koreanize_matplotlib # To enable Korean fonts in matplotlib
+#import koreanize_matplotlib # To enable Korean fonts in matplotlib
 import os
 from loguru import logger
 from wordcloud import WordCloud
 from collections import Counter
 import re
+import matplotlib.font_manager as fm # matplotlib 폰트 관리자 임포트
 
 # Configure loguru
 logger.add("yes24_eda_{time}.log", rotation="500 MB")
@@ -72,6 +73,22 @@ logger.info("Discount rate calculated.")
 
 # --- Exploratory Data Analysis (EDA) and Visualization ---
 logger.info("Starting EDA and visualization.")
+
+# Define a path to a Korean font available on Windows.
+# This might need to be adjusted based on the user's system.
+# Common Windows Korean fonts: 'Malgun Gothic', 'Batang', 'Gulim'
+font_path = 'C:/Windows/Fonts/malgunbd.ttf' # Malgun Gothic Bold
+
+# Check if the font path exists, otherwise try another common one
+if not os.path.exists(font_path):
+    font_path = 'C:/Windows/Fonts/malgun.ttf' # Malgun Gothic Regular
+if not os.path.exists(font_path):
+    logger.warning(f"Korean font not found at {font_path}. Word cloud might not display Korean correctly.")
+    # Fallback to a generic font or provide instructions
+    font_path = None # WordCloud will use its default, which might not support Korean
+
+font_prop = fm.FontProperties(fname=font_path).get_name()
+plt.rc('font', family=font_prop)
 
 # 1. Distribution of Sales Price
 plt.figure(figsize=(10, 6))
@@ -168,18 +185,6 @@ filtered_words = [word for word in words if word not in korean_stopwords and len
 text_for_wordcloud = ' '.join(filtered_words)
 
 
-# Define a path to a Korean font available on Windows.
-# This might need to be adjusted based on the user's system.
-# Common Windows Korean fonts: 'Malgun Gothic', 'Batang', 'Gulim'
-font_path = 'C:/Windows/Fonts/malgunbd.ttf' # Malgun Gothic Bold
-
-# Check if the font path exists, otherwise try another common one
-if not os.path.exists(font_path):
-    font_path = 'C:/Windows/Fonts/malgun.ttf' # Malgun Gothic Regular
-if not os.path.exists(font_path):
-    logger.warning(f"Korean font not found at {font_path}. Word cloud might not display Korean correctly.")
-    # Fallback to a generic font or provide instructions
-    font_path = None # WordCloud will use its default, which might not support Korean
 
 if font_path:
     wordcloud = WordCloud(
