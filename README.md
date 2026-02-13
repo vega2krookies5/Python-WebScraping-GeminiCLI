@@ -55,3 +55,6 @@ uv add streamlit
 uv pip install --upgrade streamlit
 
 uv add streamlit_folium
+
+
+python ssg_com\ssg_scraper.py
